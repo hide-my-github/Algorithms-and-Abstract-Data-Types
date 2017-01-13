@@ -1,0 +1,56 @@
+// Student: Josh, Tsung Chi, Shih
+// CruzID/CruzID#: jtshih/1436140
+// Class: CMPS 101
+// Date: 2/26/2015
+// Filename: README
+
+Files Include:
+
+	List.c
+	List.h
+	Graph.c
+	Graph.h
+	GraphTest.c
+	FindPath.c
+	Makefile
+	README
+
+COMMENTS:
+	In GraphTest.c I commented out a line (32) to connect two components so that the test would be more vigorous if needed. 
+	Please feel free to uncomment that line if you feel my GraphTest.c was not sufficient in proving the robustness of my program. 
+	I feel that I have tested my programs well enough even running through all the given text input files and matching the outputs to make sure nothing went awry.
+	Have a good day.
+
+
+PRECONDITIONS FOR Graph.c FUNCTIONS:
+	int getParent(Graph G, int u);
+			Pre: 1 <= u <= getOrder(G)
+	int getDist(Graph G, int u);
+			Pre: 1 <= u <= getOrder(G)
+	void getPath(List L, Graph G, int u);
+			Pre: getSource(G)!=NIL, 1 <= u <= getOrder(G)
+	void addEdge(Graph G, int u, int v);
+			Pre: 1 <= u <= getOrder(G), 1 <= v <= getOrder(G)
+	void addArc(Graph G, int u, int v);
+			Pre: 1 <= u <= getOrder(G), 1 <= v <= getOrder(G)
+
+
+PRECONDITIONS FOR List.c FUNCTIONS:
+	int front(List L)
+		Pre: length(L)>0
+	int back(List L)
+		Pre: length(L)>0
+	int getElement(List L)
+		Pre: length(L)>0, getIndex(L)>=0
+	void moveTo(List L, int i)
+		Pre: length(L)>0
+	void insertBefore(List L, int data)
+		Pre: length(L)>0, getIndex(L)>=0
+	void insertAfter(List L, int data)
+		Pre: length(L)>0, getIndex(L)>=0
+	void deleteFront(List L)
+		Pre: length(L)>0
+	void deleteBack(List L)
+		Pre: length(L)>0
+	void delete(List L)
+		Pre: length(L)>0, getIndex(L)>=0

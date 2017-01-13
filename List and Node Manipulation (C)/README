@@ -1,0 +1,18 @@
+// Student: Josh, Tsung Chi, Shih
+// CruzID/CruzID#: jtshih/1436140
+// Class: CMPS 101
+// Date: 1/23/2015
+// Filename: README
+
+Files:
+Lex.c
+List.c
+List.h
+ListClient.h
+README
+Makefile
+
+
+Comments:
+pa1 got graded, realized I put getIndex() instead of getElement(). goodbye 20 points. At least I fixed it in pa2.
+Have a good day.

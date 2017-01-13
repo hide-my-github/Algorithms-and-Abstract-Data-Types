@@ -1,0 +1,68 @@
+// Student: Josh, Tsung Chi, Shih
+// CruzID/CruzID#: jtshih/1436140
+// Class: CMPS 101
+// Date: 3/10/2015
+// Filename: README
+
+Files Include:
+
+	List.h
+	List.c
+	Graph.h
+	Graph.c
+	GraphTest.c
+	FindComponents.c
+	Makefile
+	README
+
+COMMENTS:
+	Main Concern: 
+		I talked to Professor Tantalo about creating a new List in DFS. He says this method is acceptable although he preferred
+		using the list we passed in. I realize the creation of a new List lengthens the efficiency, so that's why I'm pointing
+		this out now. I sought the professor's guidance and he told me that the way I have implemented is not wrong.
+	
+	FindComponents.c was originally FindPath.c since the method to open and read through the file lines were the same.
+	Graph.c was also recycled from pa4's Graph.c, many similarities. New functions and removed old unused functions.
+	GraphTest.c tests each function of Graph.c explicitly. No errors in the calculations/functions were found.
+	List.h and List.c were not altered and reused from pa4. Only modification was to the comment block.
+	Makefile modified so that I can 'make checkTest', 'make GraphTest', and 'GraphTest'.
+	Thanks for taking the time out to grade all my projects and also have good comments/feedback! Organized my coding quite a bit!
+	Have a good Spring Break!
+
+
+PRECONDITIONS FOR Graph.c FUNCTIONS:
+	int getParent(Graph G, int u);
+			Pre: 1 <= u <= getOrder(G)
+	int getDiscover(Graph G, int u);
+			Pre: 1 <= u <= getOrder(G)
+	int getFinish(Graph G, int u);
+			Pre: 1 <= u <= getOrder(G)			
+	void addEdge(Graph G, int u, int v);
+			Pre: 1 <= u <= getOrder(G), 1 <= v <= getOrder(G)
+	void addArc(Graph G, int u, int v);
+			Pre: 1 <= u <= getOrder(G), 1 <= v <= getOrder(G)
+	void DFS(Graph G, List S);
+			Pre: getLength(S) == getOrder(G)
+
+
+PRECONDITIONS FOR List.c FUNCTIONS:
+	int front(List L)
+		Pre: length(L)>0
+	int back(List L)
+		Pre: length(L)>0
+	int getElement(List L)
+		Pre: length(L)>0, getIndex(L)>=0
+	void moveTo(List L, int i)
+		Pre: length(L)>0
+	void insertBefore(List L, int data)
+		Pre: length(L)>0, getIndex(L)>=0
+	void insertAfter(List L, int data)
+		Pre: length(L)>0, getIndex(L)>=0
+	void deleteFront(List L)
+		Pre: length(L)>0
+	void deleteBack(List L)
+		Pre: length(L)>0
+	void delete(List L)
+		Pre: length(L)>0, getIndex(L)>=0
+
+	

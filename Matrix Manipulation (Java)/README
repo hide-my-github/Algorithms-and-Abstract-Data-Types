@@ -1,0 +1,65 @@
+// Student: Josh, Tsung Chi, Shih
+// CruzID/CruzID#: jtshih/1436140
+// Class: CMPS 101
+// Date: 2/9/2015
+// Filename: README
+
+Files Include:
+
+	Sparse.java
+	Matrix.java
+	List.java
+	MatrixTest.java
+	ListTest.java
+	Makefile
+	README
+
+COMMENTS:
+	Have a good day.
+
+
+MUST-KNOW ALTERATIONS:
+	
+	2/9/2015 ***UPDATE*** 
+	Found a way to use the normal toString method, I consider it very messy and I just don't like it at all. I prefer passing PrintWriter in as an argument. I'm leaving my previous code of toString(PrintWriter out), but commenting it out. Sorry for the long read.
+	
+	2/7/2015
+	Okay so the Matrix.java has TWO public String toString functions. One that applies the normal System.out.println(Matrix A); and another that takes in a PrintWriter argument. Before any points are deducted, please hear my reasoning. 
+	At first I wanted to to public String[] toString, but that's impossible since it has to be of type String. Then I thought of any other possibilities to return an array of values, but it's impossible given that return will terminate the function altogether. The main problem was that my Matrix toString had to traverse through the rows which meant multiple List toString calls that cannot be saved. I was in a great pickle by this point. The fastest and clearest way I could think of was to drag the output file INTO the Matrix toString method. Which I've done with my String toString(PrintWriter out); I truly hope this makes sense to you as it does for me. I just couldn't find a way to return an array of strings back out to the executable.
+	I've left commented out "out.println(Matrix A)" text on the Sparse.java. The problem was that in my Matrix toString function returned "", since I couldn't return an array.
+	
+
+
+
+PRECONDITIONS FOR Matrix.java FUNCTIONS:
+	Matrix(int n) 
+		pre: n>=1
+	void changeEntry(int i, int j, double x)
+		pre: 1<=i<=getSize(), 1<=j<=getSize()
+	Matrix add(Matrix M)
+		pre: getSize()==M.getSize()
+	Matrix sub(Matrix M)
+		pre: getSize()==M.getSize()
+	Matrix mult(Matrix M)
+		pre: getSize()==M.getSize()
+
+
+PRECONDITIONS FOR List.java FUNCTIONS:
+	int front()
+		Pre: length()>0
+	int back()
+		Pre: length()>0
+	int getElement()
+		Pre: length()>0, getIndex()>=0
+	void moveTo(int i)
+		Pre: length()>0
+	void insertBefore(int data)
+		Pre: length()>0, getIndex()>=0
+	void insertAfter(int data)
+		Pre: length()>0, getIndex()>=0
+	void deleteFront()
+		Pre: length()>0
+	void deleteBack()
+		Pre: length()>0
+	void delete()
+		Pre: length()>0, getIndex()>=0
